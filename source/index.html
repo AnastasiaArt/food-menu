@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <title>Escape</title>
+  <link href="css/style-min.css" rel="stylesheet">
+  <link rel="preload" href="img/info.png" as="image">
+  <link rel="preload" href="fonts/ttnorms.woff2" as="font">
+  <link rel="preload" href="fonts/ttnorms-medium.woff2" as="font">
+  <link rel="preload" href="fonts/ttnorms-bold.woff2" as="font">
+  <script src="js/picturefill.min.js"></script>
+</head>
+<body>
+  <svg style="display:none">
+    <symbol width="22" height="19" viewBox="0 0 22 19" fill="none" id="icon-user">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M11.0148 18.4874C8.06756 18.4874 5.12033 18.4888 2.17255 18.487C1.26227 18.4865 1 18.2668 1 17.5013C0.999454 16.026 1.81631 14.9394 3.35057 14.339C4.28162 13.9751 5.33178 13.8308 6.33004 13.593C6.56553 13.5367 6.81468 13.519 7.0469 13.4553C8.37244 13.0904 8.34786 13.2291 7.9774 12.0065C7.76923 11.3196 7.18295 10.6886 6.65186 10.1087C6.04428 9.44555 5.57055 8.76144 5.45636 7.91863C5.44215 7.81532 5.38697 7.68966 5.4345 7.61102C6.02351 6.63697 5.54433 5.59173 5.71863 4.58557C5.85577 3.79117 6.1623 3.1173 6.79556 2.53092C6.94254 2.39503 7.04526 2.18328 7.06767 1.99806C7.13596 1.42843 7.45068 1.08405 8.12657 1.03937C10.216 0.902549 12.2425 1.10825 14.1664 1.87892C15.3624 2.3578 16.047 3.15267 16.2295 4.24212C16.3273 4.82292 16.2765 5.42047 16.3246 6.00871C16.3585 6.42988 16.4273 6.85105 16.5142 7.2671C16.7076 8.19228 16.3301 8.98203 15.7252 9.71128C15.4668 10.0231 15.1466 10.2986 14.857 10.5913C14.2724 11.1828 13.9615 11.8674 13.8648 12.6348C13.8238 12.961 13.9145 13.1863 14.3073 13.27C14.9794 13.4138 15.6487 13.5707 16.3273 13.6861C17.6283 13.9058 18.8615 14.232 19.8472 15.0427C20.8083 15.8329 21.1154 16.8041 20.9629 17.9024C20.9001 18.3543 20.528 18.4893 20.0422 18.4884C18.5686 18.4851 17.0945 18.4879 15.6209 18.4879C14.085 18.4879 12.5501 18.4874 11.0148 18.4874ZM7.92823 1.82354C8.27792 2.47368 7.83862 2.7664 7.45724 3.12242C7.14908 3.40956 6.8196 3.77255 6.7524 4.13555C6.61744 4.86759 6.62017 5.62337 6.63438 6.36845C6.64202 6.77798 6.84364 7.18193 6.41637 7.54167C6.32457 7.61939 6.33004 7.86186 6.39998 7.98285C6.7289 8.55155 7.00374 9.16818 7.46762 9.64938C8.36425 10.5783 9.04997 11.5444 9.05543 12.7893C9.05871 13.4888 8.92812 13.7396 8.13422 13.9583C7.34141 14.1771 6.52291 14.3376 5.70442 14.4782C4.68923 14.6532 3.71392 14.8961 2.93531 15.5081C2.19386 16.0903 1.81194 16.799 1.94963 17.6842C2.09278 17.7084 2.17146 17.7326 2.25014 17.7326C8.04133 17.7358 13.8325 17.7349 19.6237 17.7428C20.0204 17.7433 20.1903 17.5571 20.0947 17.2961C19.904 16.7762 19.7368 16.2089 19.362 15.7887C18.62 14.9552 17.4704 14.6918 16.312 14.4791C15.4367 14.3181 14.5696 14.1208 13.7112 13.9011C13.1867 13.7671 12.9725 13.4348 12.961 12.9443C12.931 11.6798 13.5096 10.643 14.4926 9.74293C15.0608 9.22263 15.5231 8.65719 15.6296 7.93399C15.6536 7.77343 15.5908 7.60171 15.5586 7.4365C15.4974 7.12283 15.3892 6.81196 15.3728 6.49689C15.3362 5.78765 15.4001 5.07097 15.316 4.36684C15.2269 3.6213 14.7789 3.03632 13.9604 2.67239C12.855 2.18049 11.677 1.90963 10.446 1.83238C9.64608 1.78305 8.83961 1.82354 7.92823 1.82354Z" fill="#575757" stroke="#575757"/>
+    </symbol>
+    <symbol width="16" height="15" viewBox="0 0 16 15" fill="none"  id="icon-phone">
+      <path d="M9.6001 9L9.6001 6L6.4001 6L6.4001 9L9.6001 9Z" fill="white"/>
+      <path d="M9.6001 15L9.6001 12L6.4001 12L6.4001 15L9.6001 15Z" fill="white"/>
+      <path d="M9.6001 3L9.6001 0L6.4001 -1.45687e-07L6.4001 3L9.6001 3Z" fill="white"/>
+      <path d="M3.19995 9L3.19995 6L-4.88758e-05 6L-4.90104e-05 9L3.19995 9Z" fill="white"/>
+      <path d="M16 9L16 6L12.8 6L12.8 9L16 9Z" fill="white"/>
+      <path d="M3.19995 15L3.19995 12L-4.88758e-05 12L-4.90104e-05 15L3.19995 15Z" fill="white"/>
+      <path d="M16 15L16 12L12.8 12L12.8 15L16 15Z" fill="white"/>
+      <path d="M3.19995 3L3.19995 0L-4.88758e-05 -1.45681e-07L-4.90104e-05 3L3.19995 3Z" fill="white"/>
+      <path d="M16 3L16 0L12.8 -1.39876e-07L12.8 3L16 3Z" fill="white"/>
+    </symbol>
+    <symbol width="187" height="192" viewBox="0 0 187 192" fill="none"  id="icon-order">
+      <path d="M183.057 60.4949L128.496 115.225L61.6709 59.5904L113.204 0.485229L183.057 60.4949Z" fill="#A0A0A0"/>
+      <path d="M186.086 87.292L115.37 118.443L73.3238 42.3216L142.799 5.9751L186.086 87.292Z" fill="#E5E5E5"/>
+      <path d="M145.588 125.637C163.458 94.4123 152.632 54.6138 121.408 36.744C90.1832 18.8743 50.3846 29.7004 32.5149 60.9247C14.6452 92.149 25.4712 131.948 56.6956 149.817C87.9199 167.687 127.718 156.861 145.588 125.637Z" fill="#8E8E8E"/>
+      <path d="M38.8493 166.127L71.4308 93.1395L67.3713 91.1833L30.3516 162.067C29.1527 164.423 30.1203 167.305 32.4971 168.462C34.895 169.619 37.7556 168.567 38.8493 166.127Z" fill="#E2E2E2"/>
+      <path d="M88.8357 87.8165C94.0752 76.9429 92.0021 65.0825 84.2053 61.3256C76.4085 57.5687 65.8406 63.338 60.6011 74.2116C55.3616 85.0852 57.4347 96.9456 65.2315 100.702C73.0283 104.459 83.5963 98.6901 88.8357 87.8165Z" fill="#F2F2F2"/>
+      <path opacity="0.2" d="M83.5971 85.491C87.4094 77.5791 86.4616 69.2194 81.48 66.819C76.4985 64.4186 69.3696 68.8866 65.5572 76.7985C61.7449 84.7104 62.6927 93.0702 67.6742 95.4705C72.6558 97.8709 79.7847 93.4029 83.5971 85.491Z" fill="#B3B3B3"/>
+      <path d="M152.79 184.868L120.167 111.902L115.981 113.626L144.103 188.486C145.05 190.947 147.847 192.167 150.308 191.157C152.748 190.148 153.884 187.308 152.79 184.868Z" fill="#E2E2E2"/>
+      <path d="M115.539 83.2115L121.66 98.0403C122.08 99.071 121.596 100.228 120.566 100.649C119.535 101.069 118.378 100.585 117.958 99.5548L111.037 82.8118C110.785 82.1808 110.154 81.7812 109.481 81.8232C108.366 81.8653 107.63 83.0011 108.072 84.0528L115.118 101.111C115.476 101.974 115.055 102.962 114.214 103.299L113.562 103.572C112.741 103.909 111.795 103.53 111.458 102.689L104.496 85.8407C104.033 84.7049 102.561 84.4314 101.698 85.2938C101.215 85.7776 101.067 86.5138 101.341 87.1448L108.345 104.119C108.661 104.876 108.303 105.739 107.546 106.054L106.578 106.454C105.821 106.769 104.959 106.412 104.643 105.655L98.5433 90.8467C98.2909 90.2368 97.4285 90.3209 97.2603 90.9309C96.0193 95.7476 96.4399 101.637 98.8168 107.4C103.423 118.569 113.646 124.922 121.639 121.64C129.631 118.338 132.387 106.622 127.78 95.4532C125.277 89.4164 121.134 84.768 116.59 82.307C115.938 81.9705 115.265 82.5804 115.539 83.2115Z" fill="#F2F2F2"/>
+    </symbol>
+    <symbol width="16" height="15" viewBox="0 0 16 15" fill="none"  id="icon-logo">
+      <path d="M0.112 32V31.232L4.192 29.264V3.056L0.112 1.088V0.319999H16.72C20.496 0.319999 23.52 1.008 25.792 2.384C28.096 3.728 29.248 5.888 29.248 8.864C29.248 10.656 28.64 12.24 27.424 13.616C26.24 14.96 24.624 16.016 22.576 16.784C20.528 17.52 18.192 17.888 15.568 17.888H11.44V29.264L16.336 31.232V32H0.112ZM11.44 2.96V15.536H13.744C16.304 15.536 18.304 14.944 19.744 13.76C21.184 12.576 21.904 11.088 21.904 9.296C21.904 7.056 21.168 5.44 19.696 4.448C18.224 3.456 16.144 2.96 13.456 2.96H11.44ZM42.0269 32.48C38.7309 32.48 36.1229 31.536 34.2029 29.648C32.3149 27.728 31.3709 25.2 31.3709 22.064C31.3709 19.632 31.8989 17.488 32.9549 15.632C34.0109 13.744 35.4349 12.272 37.2269 11.216C39.0189 10.16 41.0189 9.632 43.2269 9.632C45.8189 9.632 47.8349 10.496 49.2749 12.224C50.7149 13.952 51.4509 16.4 51.4829 19.568L51.2909 19.808H37.8509V20.048C37.8509 21.392 38.1069 22.624 38.6189 23.744C39.1309 24.832 39.9309 25.696 41.0189 26.336C42.1389 26.976 43.5789 27.296 45.3389 27.296C46.2669 27.296 47.2269 27.184 48.2189 26.96C49.2429 26.736 50.2989 26.352 51.3869 25.808H51.5309V26.576C50.7309 28.272 49.4989 29.68 47.8349 30.8C46.2029 31.92 44.2669 32.48 42.0269 32.48ZM42.1229 11.792C41.0029 11.792 40.0749 12.304 39.3389 13.328C38.6349 14.352 38.1869 15.792 37.9949 17.648H46.1069C45.8829 15.44 45.4189 13.92 44.7149 13.088C44.0429 12.224 43.1789 11.792 42.1229 11.792ZM66.1139 32.48C64.0659 32.48 62.2579 32.048 60.6899 31.184C59.1219 30.32 57.9059 29.104 57.0419 27.536C56.1779 25.968 55.7459 24.144 55.7459 22.064C55.7459 19.632 56.2419 17.488 57.2339 15.632C58.2579 13.744 59.6659 12.272 61.4579 11.216C63.2819 10.16 65.3939 9.632 67.7939 9.632C69.2979 9.632 70.6579 9.84 71.8739 10.256C73.0899 10.672 74.0019 11.248 74.6099 11.984C75.1219 12.592 75.3779 13.072 75.3779 13.424C75.3779 13.808 75.1699 14.192 74.7539 14.576L72.4979 16.496H72.1619L70.4819 14.144C69.9379 13.408 69.3939 12.832 68.8499 12.416C68.3059 11.968 67.5859 11.744 66.6899 11.744C65.2179 11.744 64.0979 12.48 63.3299 13.952C62.5939 15.392 62.2259 17.328 62.2259 19.76C62.2259 21.136 62.4659 22.4 62.9459 23.552C63.4259 24.704 64.1779 25.616 65.2019 26.288C66.2579 26.96 67.6179 27.296 69.2819 27.296C70.1779 27.296 71.1379 27.184 72.1619 26.96C73.1859 26.736 74.2419 26.352 75.3299 25.808H75.4739V26.576C74.6739 28.272 73.4579 29.68 71.8259 30.8C70.2259 31.92 68.3219 32.48 66.1139 32.48ZM78.3171 18.32V10.112H100.781V18.32H99.8691L96.4611 12.464H92.9091V29.696L96.9411 31.232V32H82.2051V31.232L86.1891 29.696V12.464H82.6371L79.2291 18.32H78.3171ZM114.793 32.48C112.521 32.48 110.521 31.968 108.793 30.944C107.065 29.888 105.721 28.496 104.761 26.768C103.801 25.04 103.321 23.136 103.321 21.056C103.321 18.944 103.801 17.024 104.761 15.296C105.721 13.568 107.065 12.192 108.793 11.168C110.521 10.144 112.521 9.632 114.793 9.632C117.065 9.632 119.049 10.144 120.745 11.168C122.473 12.192 123.817 13.568 124.777 15.296C125.737 17.024 126.217 18.944 126.217 21.056C126.217 23.136 125.737 25.04 124.777 26.768C123.817 28.496 122.473 29.888 120.745 30.944C119.049 31.968 117.065 32.48 114.793 32.48ZM115.321 30.128C116.249 30.128 117.001 29.76 117.577 29.024C118.185 28.256 118.617 27.248 118.873 26C119.161 24.752 119.305 23.424 119.305 22.016C119.305 20.288 119.129 18.656 118.777 17.12C118.457 15.584 117.929 14.336 117.193 13.376C116.489 12.416 115.545 11.936 114.361 11.936C113.401 11.936 112.617 12.32 112.009 13.088C111.401 13.824 110.953 14.816 110.665 16.064C110.377 17.28 110.233 18.608 110.233 20.048C110.233 21.808 110.409 23.456 110.761 24.992C111.113 26.496 111.657 27.728 112.393 28.688C113.161 29.648 114.137 30.128 115.321 30.128ZM129.379 43.04V42.272L132.595 40.736V15.392L129.523 13.136V12.56L138.259 9.632H138.835L139.219 12.56H139.507C140.691 11.536 141.827 10.8 142.915 10.352C144.035 9.872 145.235 9.632 146.515 9.632C147.923 9.632 149.235 10.064 150.451 10.928C151.699 11.76 152.691 12.96 153.427 14.528C154.163 16.096 154.531 17.968 154.531 20.144C154.531 22.704 154.019 24.912 152.995 26.768C151.971 28.592 150.611 30 148.915 30.992C147.219 31.984 145.379 32.48 143.395 32.48C142.659 32.48 141.939 32.448 141.235 32.384C140.563 32.32 139.923 32.192 139.315 32V40.736L143.059 42.272V43.04H129.379ZM142.531 13.568C141.955 13.568 141.411 13.648 140.899 13.808C140.419 13.968 139.891 14.208 139.315 14.528V28.4C140.243 29.456 141.507 29.984 143.107 29.984C143.875 29.984 144.611 29.744 145.315 29.264C146.051 28.784 146.643 27.936 147.091 26.72C147.571 25.504 147.811 23.776 147.811 21.536C147.811 18.784 147.267 16.768 146.179 15.488C145.091 14.208 143.875 13.568 142.531 13.568ZM163.498 32.432C161.93 32.432 160.586 31.968 159.466 31.04C158.346 30.08 157.818 28.704 157.882 26.912C157.882 25.76 158.106 24.784 158.554 23.984C159.002 23.152 159.786 22.432 160.906 21.824C162.026 21.216 163.594 20.656 165.61 20.144L170.122 19.04V16.064C170.122 14.848 169.754 13.872 169.018 13.136C168.282 12.4 167.338 12.032 166.186 12.032C165.162 12.032 164.426 12.256 163.978 12.704C163.53 13.152 163.306 13.824 163.306 14.72V16.928L163.114 17.12H159.946C159.466 17.12 159.13 17.008 158.938 16.784C158.746 16.56 158.65 16.176 158.65 15.632C158.65 14.928 158.922 14.24 159.466 13.568C160.042 12.896 160.794 12.272 161.722 11.696C162.874 10.96 163.946 10.432 164.938 10.112C165.962 9.792 167.066 9.632 168.25 9.632C169.818 9.632 171.258 9.84 172.57 10.256C173.882 10.672 174.922 11.344 175.69 12.272C176.49 13.168 176.89 14.336 176.89 15.776V28.448C177.402 28.96 178.17 29.216 179.194 29.216H180.586L180.73 29.36V30.032C180.378 30.64 179.77 31.2 178.906 31.712C178.074 32.224 176.986 32.48 175.642 32.48C174.298 32.48 173.194 32.208 172.33 31.664C171.498 31.088 170.858 30.272 170.41 29.216H170.122C169.322 30.112 168.362 30.88 167.242 31.52C166.122 32.128 164.874 32.432 163.498 32.432ZM164.218 25.568C164.218 26.592 164.49 27.36 165.034 27.872C165.61 28.352 166.394 28.592 167.386 28.592C168.25 28.592 169.162 28.4 170.122 28.016V20.96C168.522 21.312 167.29 21.696 166.426 22.112C165.594 22.528 165.018 23.008 164.698 23.552C164.378 24.096 164.218 24.768 164.218 25.568ZM185.61 12.416L182.394 10.88V10.112H194.634V10.88L192.33 12.416V19.376H199.578V12.416L197.322 10.88V10.112H209.562V10.88L206.346 12.416V29.696L209.562 31.232V32H197.322V31.232L199.578 29.696V21.728H192.33V29.696L194.634 31.232V32H182.394V31.232L185.61 29.696V12.416Z" fill="white"/>
+    </symbol>
+  </svg>
+  <header class="main-header">
+    <div class="main-header__wrapper container">
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a class= "main-nav__link" href="#">Ресторан</a></li>
+          <li class="main-nav__item"><a class= "main-nav__link" href="#">Доставка</a></li>
+          <li class="main-nav__item"><a class= "main-nav__link" href="#">Караоке</a></li>
+          <li class="main-nav__item"><a class= "main-nav__link" href="#">О нас</a></li>
+          <li class="main-nav__item"><a class= "main-nav__link" href="#">Новости</a></li>
+          <li class="main-nav__item"><a class= "main-nav__link" href="#">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="main-header__burger navBurger" role="navigation" id="navToggle"></div>
+      <a class="main-header__logo">
+        <img src="img/logo-img.png" alt="Logo Escape">
+      </a>
+      <ul class="main-header__user user-nav">
+        <li class="user-nav__item"><a class="user-nav__logo">
+          <svg fill="#FFFFFF" x="0px" y="0px" width="146.3px" height="40.375px" aria-label="PINK">
+            <use xlink:href="#icon-iser"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+<main class="main-content">
+  <div class="main-content__columns">
+  <section class="info">
+    <h1 class="visually-hidden">Ресторан восточной кухни</h1>
+    <a class="info__logo">
+      <svg fill="#FFFFFF" x="0px" y="0px" width="146.3px" height="40.375px" aria-label="PINK">
+        <use xlink:href="#icon-logo"></use>
+      </svg>
+    </a>
+    <table class="info__table">
+      <tr class="info__item rates__item--title">
+        <th class="info__name">Кухня</th>
+        <th class="info__name">Заказ</th>
+        <th class="info__name">Доставка</th>
+      </tr>
+      <tr class="info__item">
+        <td class="info__name">Восточная</td>
+        <td class="info__name">от 1000 &#8381;</td>
+        <td class="info__name">с 11:00 до 02:00</td>
+      </tr>
+    </table>
+    <a class="info__link">О ресторане</a>
+    </section>
+    <div class="scroll-menu">
+      <ul class="scroll-menu__list">
+        <li class="scroll-menu__item">Популярные</li>
+        <li class="scroll-menu__item">Горячее</li>
+        <li class="scroll-menu__item">Гарниры</li>
+        <li class="scroll-menu__item">Выпечка</li>
+        <li class="scroll-menu__item">Гриль</li>
+        <li class="scroll-menu__item">Детское</li>
+        <li class="scroll-menu__item">Закуски</li>
+        <li class="scroll-menu__item">Супы</li>
+        <li class="scroll-menu__item">Детское</li>
+        <li class="scroll-menu__item">Закуски</li>
+        <li class="scroll-menu__item">Супы</li>
+        <li class="scroll-menu__item">Супы</li>
+        <li class="scroll-menu__item">Супы</li>
+      </ul>
+    </div>
+    <section class="catalog catalog--hit">
+      <header class="catalog__header">
+        <h2 class="catalog__title">Популярное</h2>
+        <div class="catalog__sort"></div>
+      </header>
+      <ul class="catalog__list">
+        <li class="catalog__item card">
+          <a class="card__image">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+              <img class="card__img" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="Фото пользователя">
+            </picture>
+          </a>
+          <div class="card__wrapper">
+            <h3 class="card__title">Плов Чайханский <span>250 г</span></h3>
+            <b>246 &#8381;</b>
+          </div>
+          <p class="card__text">Камчатский краб, авокадо, свежие овощи и цитрусовый... <a class="card__link-more">подробнее</a></p>
+        </li>
+        <li class="catalog__item card">
+          <a class="card__image">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+              <img class="card__img" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="Фото пользователя">
+            </picture>
+          </a>
+          <div class="card__wrapper">
+            <h3 class="card__title">Шаверма<span>336 г</span></h3>
+            <b>246 &#8381;</b>
+          </div>
+          <p class="card__text">Камчатский краб, авокадо, свежие овощи и цитрусовый... <a class="card__link-more">подробнее</a></p>
+        </li>
+        <li class="catalog__item card">
+          <a class="card__image">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+              <img class="card__img" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="Фото пользователя">
+            </picture>
+          </a>
+          <div class="card__wrapper">
+            <h3 class="card__title">Шашлык<span>250 г</span></h3>
+            <b>656 &#8381;</b>
+          </div>
+          <p class="card__text">Камчатский краб, авокадо, свежие овощи и цитрусовый... <a class="card__link-more">подробнее</a></p>
+        </li>
+        <li class="catalog__item card">
+          <a class="card__image">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+              <img class="card__img" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="Фото пользователя">
+            </picture>
+          </a>
+          <div class="card__wrapper">
+            <h3 class="card__title">Судак <span>250 г</span></h3>
+            <b>226 &#8381;</b>
+          </div>
+          <p class="card__text">Камчатский краб, авокадо, свежие овощи и цитрусовый... <a class="card__link-more">подробнее</a></p>
+        </li>
+        <li class="catalog__item card">
+          <a class="card__image">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+              <img class="card__img" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="Фото пользователя">
+            </picture>
+          </a>
+          <div class="card__wrapper">
+            <h3 class="card__title">Манты <span>250 г</span></h3>
+            <b>326 &#8381;</b>
+          </div>
+          <p class="card__text">Камчатский краб, авокадо, свежие овощи и цитрусовый... <a class="card__link-more">подробнее</a></p>
+        </li>
+        <li class="catalog__item card">
+          <a class="card__image">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+              <img class="card__img" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="Фото пользователя">
+            </picture>
+          </a>
+          <div class="card__wrapper">
+            <h3 class="card__title">Шаверма <span>250 г</span></h3>
+            <b>146 &#8381;</b>
+          </div>
+          <p class="card__text">Камчатский краб, авокадо, свежие овощи и цитрусовый... <a class="card__link-more">подробнее</a></p>
+        </li>
+        <li class="catalog__item card">
+          <a class="card__image">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+              <img class="card__img" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="Фото пользователя">
+            </picture>
+          </a>
+          <div class="card__wrapper">
+            <h3 class="card__title">Бэшбармак <span>250 г</span></h3>
+            <b>446 &#8381;</b>
+          </div>
+          <p class="card__text">Камчатский краб, авокадо, свежие овощи и цитрусовый... <a class="card__link-more">подробнее</a></p>
+        </li>
+        <li class="catalog__item card">
+          <a class="card__image">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+              <img class="card__img" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="Фото пользователя">
+            </picture>
+          </a>
+          <div class="card__wrapper">
+            <h3 class="card__title">Ковурма <span>250 г</span></h3>
+            <b>246 &#8381;</b>
+          </div>
+          <p class="card__text">Камчатский краб, авокадо, свежие овощи и цитрусовый... <a class="card__link-more">подробнее</a></p>
+        </li>
+      </ul>
+    </section>
+    <section class="catalog catalog--hot">
+      <header class="catalog__header">
+        <h2 class="catalog__title">Популярное</h2>
+        <div class="catalog__sort"></div>
+      </header>
+      <ul class="catalog__list">
+        <li class="catalog__item card">
+          <a class="card__image">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+              <img class="card__img" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="Фото пользователя">
+            </picture>
+          </a>
+          <div class="card__wrapper">
+            <h3 class="card__title">Плов Чайханский <span>250 г</span></h3>
+            <b>246 &#8381;</b>
+          </div>
+          <p class="card__text">Камчатский краб, авокадо, свежие овощи и цитрусовый... <a class="card__link-more">подробнее</a></p>
+        </li>
+        <li class="catalog__item card">
+          <a class="card__image">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+              <img class="card__img" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="Фото пользователя">
+            </picture>
+          </a>
+          <div class="card__wrapper">
+            <h3 class="card__title">Шаверма<span>336 г</span></h3>
+            <b>246 &#8381;</b>
+          </div>
+          <p class="card__text">Камчатский краб, авокадо, свежие овощи и цитрусовый... <a class="card__link-more">подробнее</a></p>
+        </li>
+      </ul>
+    </section>
+    <section class="order">
+      <h2 class="order__title">Мой заказ</h2>
+      <div class="order__list"></div>
+    </section>
+  </div>
+</main>
+<section class="modal modal--card">
+  <img class="modal-img" alt="Фото товара">
+    <h3 class="modal__top-title">Стейк из говядины <span> 250 г</span></h3>
+    <ul class="modal__discription">
+      <li>Описание <p class="modal-text">Стейк из поясничной части мраморной говядины. Рекомендуемая степень прожарки medium</p></li>
+      <li>Состав <p class="modal-text">Микс салатов, лосось, соус терияки, соус Унаги</p></li>
+      <li>Пищевая ценность
+        <table class="modal__table">
+          <tr class="modal__table-item modal__table-item--title">
+            <th class="modal__table-name">Кухня</th>
+            <th class="modal__table-name">Заказ</th>
+            <th class="modal__table-name">Доставка</th>
+          </tr>
+          <tr class="modal__table-item">
+            <td class="modal__table-name">Восточная</td>
+            <td class="modal__table-name">от 1000 &#8381;</td>
+            <td class="modal__table-name">с 11:00 до 02:00</td>
+          </tr>
+        </table></li>
+    </ul>
+    <p class="modal__text modal__text--error">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+    <div class="modal__bg modal__bg--error">
+      <button type="button" class="modal__button button">ОК</button>
+    </div>
+  </section>
+</body>
+</html>
