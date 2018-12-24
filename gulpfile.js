@@ -61,7 +61,7 @@ gulp.task("images", function() {
     imagemin.optipng({optimizationLevel:3}),
     imagemin.jpegtran({progressive:true})
   ]))
-  .pipe(gulp.dest("build/img"));
+  .pipe(gulp.dest("source/img"));
 });
 
 gulp.task("html", function() {
@@ -71,7 +71,9 @@ gulp.task("html", function() {
 
 gulp.task("copy", function () {
   return gulp.src([
-    "source/fonts/**/*.{woff,woff2}"
+    "source/fonts/**/*.{woff,woff2}",
+    "source/js/**",
+    "source/img/**"
   ], {
     base: "source"
   })

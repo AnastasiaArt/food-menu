@@ -1,0 +1,27 @@
+.catalog__title-link {
+  @include link;
+  @include font-style(32px, 36px, 700);
+
+  letter-spacing: 0.01em;
+  color: $color-text;
+  margin-bottom: 72px;
+
+
+  & sup {
+    @include font-style(18px, 20px, 700);
+
+    letter-spacing: 0.01em;
+    opacity: 0.2;
+  }
+
+  & span {
+    display: none;
+  }
+}
+
+.catalog__list {
+  @include list;
+}
+.catalog__title {
+    @include font-style(36px, 32px, 700);
+}

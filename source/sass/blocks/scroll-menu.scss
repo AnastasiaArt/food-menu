@@ -1,0 +1,89 @@
+.scroll-menu {
+  background-color: $white;
+  padding: 0 10px;
+  position: absolute;
+  height: 350px;
+  width: 100%;
+  top: 60%;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  &::after {
+    @include pseudo;
+
+    width: 100%;
+    height: 172px;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(359.18deg, #FFFFFF 19.3%, rgba(255, 255, 255, 0) 83.57%);
+  }
+}
+.scroll-menu.overlay:before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, .5);
+  z-index: 50;
+}
+.scroll-menu__list {
+  @include list;
+
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  align-items: flex-start;
+}
+
+.scroll-menu__item {
+  margin-bottom: 44px;
+}
+
+div.nicescroll-cursors {
+  border: none;
+  display: none;
+}
+
+div.nicescroll-rails-hr,
+div.nicescroll-rails,
+div.nicescroll-rails-vr {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+@include respond-to(large){
+  .scroll-menu {
+    height: 50px;
+
+    &::after {
+      @include pseudo;
+
+      width: 10%;
+      height: 100%;
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(270.17deg, #FFFFFF 9.25%, rgba(255, 255, 255, 0) 188.53%);
+    }
+  }
+
+  .scroll-menu__list {
+    @include list;
+
+    height: 78px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .scroll-menu__item {
+    margin-right: 44px;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+}
+}

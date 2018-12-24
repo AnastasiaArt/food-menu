@@ -23,7 +23,7 @@
   font-size: $size;
   line-height: $height;
   font-weight: $weight;
-  text-align: center;
+  text-align: left;
 }
 
 @mixin bgImage {
@@ -32,7 +32,7 @@
 }
 
 @mixin link {
-  color: $white;
+  color: $color-text;
   text-decoration: none;
   display: block;
 }

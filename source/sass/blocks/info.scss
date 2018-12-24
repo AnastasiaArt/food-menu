@@ -1,0 +1,80 @@
+.info {
+  width: 100%;
+  min-height: 565px;
+  color: $color-text;
+  background-color: $bg-gray;
+  background-image: url("../img/info-bg-mobile@1x.jpg");
+  background-position: center 0;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 62px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/info-bg-mobile@2x.png");
+    background-position: center 0;
+  }
+}
+
+.info__wrapper-bg {
+  width: 100%;
+  color: $white;
+  background-color: $accent-color;
+  padding-top: 32px;
+  box-sizing: border-box;
+  padding-bottom: 52px;
+}
+
+.info__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.info__table {
+  width: 100%;
+}
+
+.info__item {
+  @include font-style(15px, 18px, 500);
+  color: $white;
+
+  &--title {
+    @include font-style(13px, 15px, 500);
+    color: rgba($white, 0.5);
+  }
+}
+
+.info__link {
+  display: none;
+}
+
+.info__logo {
+  @include link;
+  padding-right: 40px;
+  position: relative;
+
+  &:after {
+    @include pseudo;
+    width: 25px;
+    height: 25px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url("../img/arrow.svg");
+  }
+}
+
+.info__btn {
+  background-color: $accent-color;
+  width: 45px;
+  height: 45px;
+  border-radius: 79px;
+  position: fixed;
+  top: 490px;
+  right: 7%;
+  box-shadow: 0 2px 5px 2px $accent-color-dark;
+  border: none;
+  z-index: 60;
+}

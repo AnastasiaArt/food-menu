@@ -1,11 +1,11 @@
-$bg-gray: #fafafa;
-$bg-purple: #7690c5;
-$bg-dark-purple: #241c38;
+$color-text: #333333;
+$accent-color: #D62323;
+$accent-color-dark: #B81111;
 $white: #ffffff;
-$gray: #777777;
-$gray-dark: #222222;
+$bg-gray: #E8EAED;
+$bg-gray-dark: #313131;
 $center: 0 auto;
-$header-height: 120px;
+$header-height: 104px;
 $breakpoints: (
   "small": 375px,
   "medium": 660px,
@@ -17,3 +17,6 @@ $container: (
  "ml": 80%,
  "xl": 73.53%
 );
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

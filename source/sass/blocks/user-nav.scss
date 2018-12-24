@@ -1,0 +1,8 @@
+.user-nav {
+  @include list;
+  margin-left: auto;
+}
+
+.user-nav__logo {
+  @include link;
+}

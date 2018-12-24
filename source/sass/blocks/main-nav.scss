@@ -4,7 +4,7 @@
   &.open {
     display: block;
     position: fixed;
-    background: $bg-dark-purple;
+    background: $bg-gray;
     top: 0;
     right: 0;
     width: 100%;
@@ -61,7 +61,7 @@
 
   &:hover,
   &:focus {
-    background-color: $bg-purple;
+    background-color: $bg-gray;
   }
   &:active {
     opacity: 0.5;

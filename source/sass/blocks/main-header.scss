@@ -4,6 +4,7 @@
   z-index: 10;
   top: 0;
   left: 0;
+  background-color: $white;
 }
 
 .main-header__wrapper {
@@ -16,6 +17,15 @@
 
 .main-header__logo {
   @include link;
+
+  width: 64px;
+  height: 64px;
+  background-color: $accent-color;
+  position: absolute;
+  z-index: 12;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 @include respond-to(medium) {
