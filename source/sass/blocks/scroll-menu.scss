@@ -54,7 +54,11 @@ div.nicescroll-rails-vr {
 
 @include respond-to(large){
   .scroll-menu {
-    height: 50px;
+    height: auto;
+    position: relative;
+    top:0;
+    padding: 0;
+    border-bottom: 1px solid $bg-gray;
 
     &::after {
       @include pseudo;
@@ -73,6 +77,8 @@ div.nicescroll-rails-vr {
     height: 78px;
     flex-direction: row;
     align-items: center;
+    margin-left: 12%;
+    margin-bottom: 59px;
   }
 
   .scroll-menu__item {
@@ -82,5 +88,12 @@ div.nicescroll-rails-vr {
     &:last-child {
       margin-right: 0;
     }
+
+    & a {
+      padding: 34px 0;
+    }
+}
+div.nicescroll-cursors {
+  display: block;
 }
 }

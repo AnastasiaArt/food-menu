@@ -13,6 +13,8 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery.nicescroll.min.js"></script>
   <script src="js/picturefill.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="js/popup.js"></script>
 </head>
 <body>
   <svg style="display:none">
@@ -127,7 +129,10 @@
     <section class="catalog catalog--hit container">
       <header class="catalog__header">
         <h2 class="catalog__title"><a class="catalog__title-link" name="hit" href="#">Популярные<span>блюда</span><sup>12</sup></a></h2>
-        <div class="catalog__sort"></div>
+        <div class="catalog__sort">
+          <span>По цене</span>
+          <button type="button" class="catalog__sort-btn" aria-label="Направление сортировки"></button>
+        </div>
       </header>
       <ul class="catalog__list">
         <li class="catalog__item card">
@@ -314,7 +319,7 @@
 
   </section>
 <script src="js/scroll.js"></script>
-<script>
+<!-- <script>
 $(function() {
   if ( $(window).width() >= 980 ) {
     $(".scroll-menu__list").niceScroll({
@@ -352,8 +357,8 @@ $(function() {
     });
   }
 });
-</script>
-<script>
+</script> -->
+<!-- <script>
 $(function() {
   $(".card__wrapper").click(function() {
     var overlay = $('<div class="overlay"> </div>');
@@ -384,7 +389,7 @@ $(function() {
 
 });
 
-</script>
+</script> -->
 <script>
 $("#navToggle").click(function() {
   $(this).toggleClass("active");

@@ -35,17 +35,6 @@ gulp.task("css", function() {
   .pipe(gulp.dest("build/css"))
   .pipe(server.stream());
 });
-// gulp.task('sprite', function() {
-//     var spriteData =
-//         gulp.src('source/img/*-icon.png')
-//             .pipe(spritesmith({
-//                 imgName: 'sprite.png',
-//                 cssName: 'sprite.css',
-//             }));
-//
-//     spriteData.img.pipe(gulp.dest('source/img/'));
-//     spriteData.css.pipe(gulp.dest('source/sass'));
-// });
 gulp.task("scripts", function() {
 return gulp.src([
 "node_modules/jquery/dist/jquery.min.js",
@@ -106,7 +95,6 @@ gulp.task("refresh", function(done) {
 
 gulp.task("build", gulp.series(
   "delete",
-  // "scripts",
   "copy",
   "images",
   "css",

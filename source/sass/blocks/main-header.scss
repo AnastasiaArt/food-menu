@@ -29,6 +29,10 @@
 }
 
 @include respond-to(large) {
+  .main-header {
+    position: relative;
+    border-bottom: 1px solid #EFEFEF;
+  }
   .main-header__wrapper {
     align-items: center;
     width: 100%;

@@ -18,7 +18,9 @@
     display: inline-block;
   }
   .user-nav {
-    margin-right: 3%;
+    box-sizing: border-box;
+    width: 8.7%;
+    border-left: 1px solid #EFEFEF;
   }
 
   .user-nav__logo svg{
@@ -29,5 +31,6 @@
 
   .user-nav__logo {
     vertical-align: baseline;
+    text-align: center;
   }
 }

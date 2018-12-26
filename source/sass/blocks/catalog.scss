@@ -30,14 +30,17 @@
 
 .catalog__list {
   @include list;
+
   @for $i from 1 through 2 {
     .catalog__item:nth-child(#{$i}) {
       display: block;
+    }
+  }
 }
+.catalog__sort {
+  display: none;
 }
-}
-
-@include respond-to(large) {
+@include respond-to(medium) {
   .catalog__list {
     display: flex;
     flex-wrap: wrap;
@@ -46,13 +49,68 @@
 
   .catalog__item {
     display: block;
-    width: 25%;
 
     &:last-child {
       margin-left: auto;
     }
   }
   .catalog--hot {
-      display: none;
+    display: none;
   }
+}
+
+@include respond-to(large) {
+ .catalog{
+   width: 100%;
+   box-sizing: border-box;
+ }
+  .catalog__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .catalog__title {
+    @include font-style(36px, 32px, 700);
+
+    letter-spacing: 0.01em;
+    width: 70%;
+  }
+  .catalog__sort {
+    @include font-style(18px, 21px, 500);
+
+    display: block;
+    width: 30%;
+    text-align: right;
+}
+
+.catalog__sort-btn {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  width: 18px;
+  height: 18px;
+
+    &::after {
+      @include pseudo;
+
+      top: 50%;
+      left: 50%;
+      width: 5px;
+      height: 5px;
+      border-bottom:  1px solid $color-text;
+      border-left:  1px solid $color-text;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+  .catalog__list {
+    @include list;
+
+    @for $i from 1 through 2 {
+      .catalog__item:nth-child(#{$i}) {
+        display: flex;
+      }
+    }
+  }
+
 }
