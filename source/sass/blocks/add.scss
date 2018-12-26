@@ -1,0 +1,97 @@
+.add {
+  position: relative;
+  bottom: 0;
+  // transform: translateY(-100%);
+  margin-bottom: -$add-height;
+  width:100%;
+  height: $add-height;
+  transition: margin 0.6s linear;
+  background-color: $accent-color;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.add.show {
+  $menu-delay: 0.5s;
+  margin-bottom: 0;
+}
+
+.add__wrapper {
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  background-color: $accent-color-dark;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  margin-bottom: -$add-height;
+  transition: margin 0.6s linear;
+}
+
+.add__wrapper.show {
+  $menu-delay: 1s;
+  margin-bottom: 0;
+}
+
+.add__button {
+  @include indent;
+
+  border: none;
+  background-color: $accent-color-dark;
+  position: relative;
+  height: 56px;
+  width: 56px;
+
+  &::before{
+    @include pseudo;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 2px;
+    background-color: $white;
+  }
+
+  &--plus::after {
+    @include pseudo;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 10px;
+    color: $white;
+    background-color: $white;
+  }
+}
+
+.add__sum {
+  color: $white;
+  display: block;
+}
+
+.add__price {
+  display: none;
+}
+
+.add__button-order {
+  @include font-style(12px, 18px, 700);
+  @include indent;
+
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: none;
+  background-color: $accent-color;
+  width: 50%;
+  height: 100%;
+  color: $white;
+  margin-left: auto;
+}
+
+.add__button-order.color-btn {
+  animation: fromBack .6s;
+  animation-duration:  2s;
+}

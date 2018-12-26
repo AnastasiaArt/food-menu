@@ -1,0 +1,171 @@
+.modal {
+  min-height: 100%;
+  overflow: auto;
+  background: #fff;
+  width: 100%;
+  // height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 800ms cubic-bezier(0.86, 0, 0.07, 1);
+  top: 100%;
+  position: fixed;
+  left: 0;
+  z-index: 100;
+}
+
+.modal__wrapper {
+  width: 100%;
+  background-color: $bg-gray;
+}
+.modal.open {
+  top: 0;
+  max-height: 100%;
+}
+
+.modal__btn-close {
+  @include indent;
+
+  display: block;
+  margin-left: auto;
+  width: 80px;
+  height: 80px;
+  margin-left: auto;
+  background-color: #F9F9FA;
+  position: relative;
+  border: none;
+
+  &::before,
+  &::after {
+    @include pseudo;
+
+    background-color: #6E6E6E;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::before {
+    width: 2px;
+    height: 28px;
+  }
+
+  &::after {
+    width: 28px;
+    height: 2px;
+  }
+}
+
+.modal__image {
+  min-height: 254px;
+
+  & img {
+    display: block;
+    margin: $center;
+  }
+}
+
+.modal__top-title{
+  @include font-style(24px, 27px, 700);
+
+  letter-spacing: 0.01em;
+  opacity: 0;
+  margin-bottom: 32px;
+  padding-top: 40px;
+
+  & span {
+   color: rgba($color-text, 0.4)
+  }
+}
+
+.modal__discription {
+  @include list;
+
+  margin: $center;
+}
+
+.modal__item {
+ color: rgba($color-text, 0.4);
+ margin-bottom: 32px;
+ width: 80%;
+
+ &:last-child {
+   margin-bottom: 0;
+ }
+}
+
+.modal__text {
+  color: $color-text;
+  margin-bottom: 0;
+}
+
+.modal__discription.slow {
+
+  $menu-delay: 1s;
+  animation: fromBack .6s;
+
+  @for $i from 1 through 3 {
+
+    .modal__item:nth-child(#{$i}) {
+      animation: fromBack .6s;
+      animation-duration:  $menu-delay;
+    }
+    $menu-delay: $menu-delay + .25s;
+  }
+}
+
+.modal__table {
+  @include list;
+
+  color:$color-text;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 17px;
+  padding-bottom: 40px;
+
+}
+.modal__table-col {
+  @include font-style(18px, 21px, 700);
+
+  & span {
+    @include font-style(12px, 17px, 500);
+
+    color: rgba($color-text, 0.4);
+    display: block;
+  }
+}
+.modal__table.slow {
+  $menu-delay: 2s;
+  animation: fromBack .6s;
+
+  @for $i from 1 through 4 {
+    .modal__table-col:nth-child(#{$i}) {
+      animation: fromBack .6s;
+      animation-duration:  $menu-delay+.5s;
+    }
+    $menu-delay: $menu-delay + .25s;;
+  }
+}
+
+@keyframes fromBack{
+  0%{
+    transform: scale(0);
+    opacity: 0;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fade{
+  0%{
+
+    opacity: 0;
+  }
+  100%{
+
+    opacity: 1;
+  }
+}

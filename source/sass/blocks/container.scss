@@ -9,5 +9,8 @@
    @include respond-to(large) {
      .container {
      width: map-get($container, xl);
+     margin: 0;
+     padding-left: 9.3%;
+     box-sizing: content-box;
    }
 }

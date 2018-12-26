@@ -28,8 +28,18 @@
   transform: translateX(-50%);
 }
 
-@include respond-to(medium) {
+@include respond-to(large) {
   .main-header__wrapper {
     align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    min-height: 72px;
   }
+
+  .main-header__logo {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 }

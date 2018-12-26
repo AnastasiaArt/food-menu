@@ -8,8 +8,8 @@
     background-clip: content-box;
     width: 24px;
     height: 16px;
-    border-top: 7px solid transparent;
-    border-bottom: 7px solid transparent;
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
     -webkit-transition: all 0.25s ease-in-out;
@@ -43,14 +43,14 @@
         -webkit-transform: rotate(135deg);
         transform: rotate(135deg);
         top: 0;
-        background: #eee;
+        background: $color-text;
         width: 110%;
     }
     &.active:after {
         bottom: 0;
         -webkit-transform: rotate(-135deg);
         transform: rotate(-135deg);
-        background: #eee;
+        background: $color-text;
         width: 110%;
     }
 }

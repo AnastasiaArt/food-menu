@@ -19,9 +19,40 @@
   }
 }
 
-.catalog__list {
-  @include list;
-}
 .catalog__title {
     @include font-style(36px, 32px, 700);
+}
+
+.catalog__item {
+  margin-bottom: 80px;
+  display: none;
+}
+
+.catalog__list {
+  @include list;
+  @for $i from 1 through 2 {
+    .catalog__item:nth-child(#{$i}) {
+      display: block;
+}
+}
+}
+
+@include respond-to(large) {
+  .catalog__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .catalog__item {
+    display: block;
+    width: 25%;
+
+    &:last-child {
+      margin-left: auto;
+    }
+  }
+  .catalog--hot {
+      display: none;
+  }
 }

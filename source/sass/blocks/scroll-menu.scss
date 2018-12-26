@@ -1,10 +1,10 @@
 .scroll-menu {
   background-color: $white;
   padding: 0 10px;
-  position: absolute;
+  position: fixed;
   height: 350px;
   width: 100%;
-  top: 60%;
+  top: 30%;
   left: 0;
   right: 0;
   z-index: 100;
@@ -19,17 +19,7 @@
     background: linear-gradient(359.18deg, #FFFFFF 19.3%, rgba(255, 255, 255, 0) 83.57%);
   }
 }
-.scroll-menu.overlay:before {
-  content: '';
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, .5);
-  z-index: 50;
-}
+
 .scroll-menu__list {
   @include list;
 
@@ -40,7 +30,14 @@
 }
 
 .scroll-menu__item {
+  width: 100%;
   margin-bottom: 44px;
+
+  & a {
+    @include link;
+    @include font-style(18px, 21px, 500);
+
+  }
 }
 
 div.nicescroll-cursors {

@@ -1,0 +1,9 @@
+@include respond-to(large) {
+  .main-content {
+    display: flex;
+  }
+
+  .main-content__columns {
+    flex-grow: 1;
+  }
+}

@@ -4,7 +4,7 @@
   &.open {
     display: block;
     position: fixed;
-    background: $bg-gray;
+    background: rgba($white, 0.9);
     top: 0;
     right: 0;
     width: 100%;
@@ -14,6 +14,8 @@
     transform: scale(1);
     li {
       display: block;
+      margin-left: 10%;
+      margin-right: 10%;
       animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards;
       animation-delay: 0.4s;
       transform: rotate(-7deg);
@@ -61,34 +63,38 @@
 
   &:hover,
   &:focus {
-    background-color: $bg-gray;
+    border-bottom: 1px solid $accent-color;
   }
   &:active {
-    opacity: 0.5;
+    border-bottom: 2px solid $accent-color-dark;
   }
 }
 
 @include respond-to(large) {
   .main-nav {
     display: block;
+    width: 50.3%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .main-nav__list {
     margin: 0;
     flex-direction: row;
+    justify-content: center;
+  }
+
+  .main-nav__item {
+      margin-right: 4%;
+
+    &:nth-child(3) {
+      margin-right: 18%;
+    }
   }
 
   .main-nav__link {
-      margin-left: 30px;
-      margin-bottom: 0;
-
-      &:hover,
-      &:focus {
-        text-decoration: underline;
-        background-color: transparent;
-      }
-      &:active {
-        opacity: 0.5;
-      }
+    @include font-style(15px, 18px, 500);
+    margin-bottom: 0;
   }
 }

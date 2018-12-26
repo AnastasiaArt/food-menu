@@ -1,0 +1,80 @@
+.card {
+  width: 100%;
+}
+
+.card__image {
+  height: 216px;
+  width: 340px;
+  background-color: $white;
+  margin: $center;
+
+  & img {
+    display: block;
+    margin: $center;
+  }
+}
+
+.card__wrapper {
+  @include link;
+
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  border-bottom: 1px solid rgba(#2E2E2E, 0.7);
+  margin-bottom: 16px;
+
+  & b {
+    @include font-style(16px, 19px, 700);
+
+    margin-left: auto;
+  }
+
+  &:hover,
+  &:focus {
+    border-bottom: 2px solid $accent-color;
+  }
+
+  &:active {
+    border-bottom: 2px solid $accent-color-dark;
+  }
+}
+
+.card__title {
+  @include indent;
+  @include font-style(18px, 21px, 700);
+
+    padding-bottom: 24px;
+
+  & span {
+    color: rgba($color-text, 0.2);
+    font-size: 16px;
+  }
+}
+
+.card__text {
+  @include font-style(15px, 21px, 400);
+
+  color: rgba($color-text, 0.8);
+}
+
+.card__link-more {
+  @include link;
+
+  display: inline-block;
+  font-weight: bold;
+
+  &:hover,
+  &:focus {
+    border-bottom: 2px solid $accent-color;
+  }
+
+  &:active {
+    border-bottom: 2px solid $accent-color-dark;
+  }
+}
+
+@include respond-to(large) {
+  .card {
+    width: 25%;
+  }
+}

@@ -12,6 +12,7 @@
   <link rel="preload" href="fonts/ttnorms-bold.woff2" as="font">
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery.nicescroll.min.js"></script>
+  <script src="js/picturefill.js"></script>
 </head>
 <body>
   <svg style="display:none">
@@ -29,7 +30,7 @@
       <path d="M3.19995 3L3.19995 0L-4.88758e-05 -1.45681e-07L-4.90104e-05 3L3.19995 3Z" fill="white"/>
       <path d="M16 3L16 0L12.8 -1.39876e-07L12.8 3L16 3Z" fill="white"/>
     </symbol>
-    <symbol width="187" height="192" viewBox="0 0 187 192" fill="none"  id="icon-order">
+    <symbol  viewBox="0 0 187 192" fill="none"  id="icon-order">
       <path d="M183.057 60.4949L128.496 115.225L61.6709 59.5904L113.204 0.485229L183.057 60.4949Z" fill="#A0A0A0"/>
       <path d="M186.086 87.292L115.37 118.443L73.3238 42.3216L142.799 5.9751L186.086 87.292Z" fill="#E5E5E5"/>
       <path d="M145.588 125.637C163.458 94.4123 152.632 54.6138 121.408 36.744C90.1832 18.8743 50.3846 29.7004 32.5149 60.9247C14.6452 92.149 25.4712 131.948 56.6956 149.817C87.9199 167.687 127.718 156.861 145.588 125.637Z" fill="#8E8E8E"/>
@@ -62,6 +63,7 @@
           <svg fill="#575757" x="0px" y="0px" width="22" height="19" aria-label="Логотип Клиент">
             <use xlink:href="#icon-user"></use>
           </svg>
+          <span class="user-nav__name">Константин</span>
         </a>
       </li>
     </ul>
@@ -92,16 +94,17 @@
           </table>
           <a class="info__link">О ресторане</a>
           <button type="button" class="info__btn" aria-label="Позвонить">
-            <svg fill="#FFFFFF" x="0px" y="0px" width="16" height="15" aria-label="Позвони">
-            <use xlink:href="#icon-phone"></use>
-          </svg></button>
+            <svg fill="#FFFFFF" x="0px" y="0px" width="16" height="15" aria-label="Позвонить">
+              <use xlink:href="#icon-phone"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </section>
     <div class="scroll-menu container">
       <ul class="scroll-menu__list">
-        <li class="scroll-menu__item"><a href="#">Популярные</a></li>
-        <li class="scroll-menu__item"><a href="#">Горячее</a></li>
+        <li class="scroll-menu__item"><a href="#hit">Популярные</a></li>
+        <li class="scroll-menu__item"><a href="#hot">Горячее</a></li>
         <li class="scroll-menu__item"><a href="#">Гарниры</a></li>
         <li class="scroll-menu__item"><a href="#">Выпечка</a></li>
         <li class="scroll-menu__item"><a href="#">Гриль</a></li>
@@ -123,44 +126,56 @@
     </div>
     <section class="catalog catalog--hit container">
       <header class="catalog__header">
-        <h2 class="catalog__title"><a class="catalog__title-link" href="#">Популярные<span>блюда</span><sup>12</sup></a></h2>
+        <h2 class="catalog__title"><a class="catalog__title-link" name="hit" href="#">Популярные<span>блюда</span><sup>12</sup></a></h2>
         <div class="catalog__sort"></div>
       </header>
       <ul class="catalog__list">
         <li class="catalog__item card">
           <a class="card__image">
-
+            <picture>
+              <source type="image/webp" srcset="img/image1-1.webp 1x">
+              <img src="img/image1-1.png" width="298" height="216" alt="Плов">
+            </picture>
           </a>
-          <div class="card__wrapper">
+          <a class="card__wrapper">
             <h3 class="card__title">Плов Чайханский <span>250 г</span></h3>
             <b>246 &#8381;</b>
-          </div>
+          </a>
           <p class="card__text">Камчатский краб, авокадо, свежие овощи и цитрусовый... <a class="card__link-more">подробнее</a></p>
         </li>
         <li class="catalog__item card">
-          <a class="card__image">
-
-          </a>
-          <div class="card__wrapper">
-            <h3 class="card__title">Шаверма<span>336 г</span></h3>
+          <div class="card__image">
+            <picture>
+              <source type="image/webp" srcset="img/image1-2.webp 1x">
+              <img src="img/image1-2.png" width="298" height="216"  alt="Шаверма">
+            </picture>
+          </div>
+          <a class="card__wrapper">
+            <h3 class="card__title">Шаверма <span>336 г</span></h3>
             <b>246 &#8381;</b>
-          </div>
+          </a>
           <p class="card__text">Камчатский краб, авокадо, свежие овощи и цитрусовый... <a class="card__link-more">подробнее</a></p>
         </li>
         <li class="catalog__item card">
-          <a class="card__image">
-
-          </a>
+          <div class="card__image">
+            <picture>
+              <source type="image/webp" srcset="img/image1-3.webp 1x">
+              <img src="img/image1-3.png" width="298" height="216"  alt="Шашлык">
+            </picture>
+          </div>
           <div class="card__wrapper">
-            <h3 class="card__title">Шашлык<span>250 г</span></h3>
+            <h3 class="card__title">Шашлык <span>250 г</span></h3>
             <b>656 &#8381;</b>
           </div>
           <p class="card__text">Камчатский краб, авокадо, свежие овощи и цитрусовый... <a class="card__link-more">подробнее</a></p>
         </li>
         <li class="catalog__item card">
-          <a class="card__image">
-
-          </a>
+          <div class="card__image">
+            <picture>
+              <source type="image/webp" srcset="img/image1-4.webp 1x">
+              <img src="img/image1-4.png" width="298" height="216" alt="Судак">
+            </picture>
+          </div>
           <div class="card__wrapper">
             <h3 class="card__title">Судак <span>250 г</span></h3>
             <b>226 &#8381;</b>
@@ -168,9 +183,12 @@
           <p class="card__text">Камчатский краб, авокадо, свежие овощи и цитрусовый... <a class="card__link-more">подробнее</a></p>
         </li>
         <li class="catalog__item card">
-          <a class="card__image">
-
-          </a>
+          <div class="card__image">
+            <picture>
+              <source type="image/webp" srcset="img/image2-1.webp 1x">
+              <img src="img/image2-1.png" alt="Манты">
+            </picture>
+          </div>
           <div class="card__wrapper">
             <h3 class="card__title">Манты <span>250 г</span></h3>
             <b>326 &#8381;</b>
@@ -178,9 +196,12 @@
           <p class="card__text">Камчатский краб, авокадо, свежие овощи и цитрусовый... <a class="card__link-more">подробнее</a></p>
         </li>
         <li class="catalog__item card">
-          <a class="card__image">
-
-          </a>
+          <div class="card__image">
+            <picture>
+              <source type="image/webp" srcset="img/image2-2.webp 1x">
+              <img src="img/image2-2.png" alt="Шаверма">
+            </picture>
+          </div>
           <div class="card__wrapper">
             <h3 class="card__title">Шаверма <span>250 г</span></h3>
             <b>146 &#8381;</b>
@@ -188,19 +209,25 @@
           <p class="card__text">Камчатский краб, авокадо, свежие овощи и цитрусовый... <a class="card__link-more">подробнее</a></p>
         </li>
         <li class="catalog__item card">
-          <a class="card__image">
-
-          </a>
+          <div class="card__image">
+            <picture>
+              <source type="image/webp" srcset="img/image2-3.webp 1x">
+              <img src="img/image2-3.png" alt="Бешбармак">
+            </picture>
+          </div>
           <div class="card__wrapper">
-            <h3 class="card__title">Бэшбармак <span>250 г</span></h3>
+            <h3 class="card__title">Бешбармак <span>250 г</span></h3>
             <b>446 &#8381;</b>
           </div>
           <p class="card__text">Камчатский краб, авокадо, свежие овощи и цитрусовый... <a class="card__link-more">подробнее</a></p>
         </li>
         <li class="catalog__item card">
-          <a class="card__image">
-
-          </a>
+          <div class="card__image">
+            <picture>
+              <source type="image/webp" srcset="img/image2-4.webp 1x">
+              <img src="img/image2-4.png" alt="Ковурма">
+            </picture>
+          </div>
           <div class="card__wrapper">
             <h3 class="card__title">Ковурма <span>250 г</span></h3>
             <b>246 &#8381;</b>
@@ -209,16 +236,19 @@
         </li>
       </ul>
     </section>
-    <section class="catalog catalog--hot">
+    <section class="catalog catalog--hot container">
       <header class="catalog__header">
-        <h2 class="catalog__title"><a class="catalog__title-link" href="#">Горячее<sup>12</sup></a></h2>
+        <h2 class="catalog__title"><a class="catalog__title-link" name="hot" href="#">Горячее<sup>12</sup></a></h2>
         <div class="catalog__sort"></div>
       </header>
       <ul class="catalog__list">
         <li class="catalog__item card">
-          <a class="card__image">
-
-          </a>
+          <div class="card__image">
+            <picture>
+              <source type="image/webp" srcset="img/image1-1.webp 1x">
+              <img src="img/image1-1.png" alt="Плов">
+            </picture>
+          </div>
           <div class="card__wrapper">
             <h3 class="card__title">Плов Чайханский <span>250 г</span></h3>
             <b>246 &#8381;</b>
@@ -226,9 +256,12 @@
           <p class="card__text">Камчатский краб, авокадо, свежие овощи и цитрусовый... <a class="card__link-more">подробнее</a></p>
         </li>
         <li class="catalog__item card">
-          <a class="card__image">
-
-          </a>
+          <div class="card__image">
+            <picture>
+              <source type="image/webp" srcset="img/image1-2.webp 1x">
+              <img src="img/image1-2.png" alt="Шаверма">
+            </picture>
+          </div>
           <div class="card__wrapper">
             <h3 class="card__title">Шаверма<span>336 г</span></h3>
             <b>246 &#8381;</b>
@@ -236,82 +269,127 @@
           <p class="card__text">Камчатский краб, авокадо, свежие овощи и цитрусовый... <a class="card__link-more">подробнее</a></p>
         </li>
       </ul>
+      </div>
     </section>
-    <section class="order">
-      <h2 class="order__title">Мой заказ</h2>
+    <section class="order container">
+      <h2 class="order__title">Мой заказ <span class="order__sum">2</span></h2>
       <div class="order__list"></div>
     </section>
-  </div>
+
 </main>
 <section class="modal modal--card">
-  <img class="modal-img" alt="Фото товара">
-    <h3 class="modal__top-title">Стейк из говядины <span> 250 г</span></h3>
-    <ul class="modal__discription">
-      <li>Описание <p class="modal-text">Стейк из поясничной части мраморной говядины. Рекомендуемая степень прожарки medium</p></li>
-      <li>Состав <p class="modal-text">Микс салатов, лосось, соус терияки, соус Унаги</p></li>
-      <li>Пищевая ценность
-        <table class="modal__table">
-          <tr class="modal__table-item modal__table-item--title">
-            <th class="modal__table-name">Кухня</th>
-            <th class="modal__table-name">Заказ</th>
-            <th class="modal__table-name">Доставка</th>
-          </tr>
-          <tr class="modal__table-item">
-            <td class="modal__table-name">Восточная</td>
-            <td class="modal__table-name">от 1000 &#8381;</td>
-            <td class="modal__table-name">с 11:00 до 02:00</td>
-          </tr>
-        </table>
+  <button type="button" class="modal__btn-close" aria-label="Закрыть"></button>
+  <div class="modal__image container">
+  <picture>
+    <source type="image/webp" media="(min-width: 660px)" srcset="img/image1-2-big.webp 1x, img/image1-2-big@2x.webp 2x">
+    <source type="image/webp" srcset="img/image1-2.png 1x">
+    <source media="(min-width: 960px)" srcset="img/image1-2-big.png 1x, img/image1-2-big@2x.jpg 2x">
+    <img alt="Фото товара" src="img/image1-2-mobile.png" srcset="img/image1-2-mobile@2x.jpg 2x">
+  </picture>
+  </div>
+  <div class="modal__wrapper">
+    <h3 class="modal__top-title container">Стейк из говядины <span> 250 г</span></h3>
+    <ul class="modal__discription container">
+      <li class="modal__item">Описание <p class="modal__text">Стейк из поясничной части мраморной говядины. Рекомендуемая степень прожарки medium</p></li>
+      <li class="modal__item">Состав <p class="modal__text">Микс салатов, лосось, соус терияки, соус Унаги</p></li>
+      <li class="modal__item">Пищевая ценность
+        <ul class="modal__table">
+          <li class="modal__table-col">650 <span>ккал</span></li>
+          <li class="modal__table-col">34 <span>белки</span></li>
+          <li class="modal__table-col">60 <span>жиры</span></li>
+          <li class="modal__table-col">12 <span>углеводы</span></li>
+        </ul>
       </li>
     </ul>
+    </div>
     <div class="modal__order-add add">
-      <div class="add-wrapper">
-        <button type="button" class="add__button button" aria-label="больше"></button>
-        <span class="add__sum">2</span>
+      <div class="add__wrapper container">
         <button type="button" class="add__button button" aria-label="меньше"></button>
+        <span class="add__sum">2</span>
+        <button type="button" class="add__button add__button--plus button" aria-label="больше"></button>
       </div>
       <p class="add__price">246 &#8381;</p>
-      <button type="submit" class="add__button button">Добавить</button>
-    </section>
-    <script src="js/scroll.js"></script>
-    <script>
-    $(function() {
-      if ( $(window).width() >= 960 ) {
-        $(".scroll-menu__list").niceScroll({
-          cursorcolor: " #D62323 ",
-          cursorwidth: "4px",
-          autohidemode: false,
-          emulatetouch: false,
-          cursorfixedheight:'30'
-          // railpadding : {top:20,right:0,left:50,bottom:20}
-        });
-      }
-      if ( $(window).width() < 960 ) {
-        var overlay = $('<div class="overlay"> </div>');
-        $(".scroll-menu").hide();
-        $(".catalog__title-link").click(function(){
-          $('<div id="overlay"> </div>');
-          overlay.appendTo(document.body)
-          $(".scroll-menu").show();
-          $(".scroll-menu__list").niceScroll({
-            autohidemode: true,
-            cursorcolor: " transparent ",
-            emulatetouch: true,
-          });
-          $(".scroll-menu__item a").click(function() {
-            overlay.remove();
-            $(".scroll-menu").hide();
-          });
-        });
-      }    
-    });
-    </script>
+      <button type="submit" class="add__button-order button">Добавить</button>
+    </div>
 
-    <script>
-    $("#navToggle").click(function() {
-      $(this).toggleClass("active");
-      $(".main-nav").toggleClass("open");
+  </section>
+<script src="js/scroll.js"></script>
+<script>
+$(function() {
+  if ( $(window).width() >= 980 ) {
+    $(".scroll-menu__list").niceScroll({
+      cursorcolor: " #D62323 ",
+      cursorwidth: "4px",
+      autohidemode: false,
+      emulatetouch: false,
+      cursorfixedheight:'30'
+      // railpadding : {top:20,right:0,left:50,bottom:20}
     });
-    </script>
-  </body>
+  }
+  if ( $(window).width() < 980 ) {
+    $(".add__button-order").text("готово");
+    var overlay = $('<div class="overlay"> </div>');
+    $(".scroll-menu").hide();
+    $(".catalog__title-link").click(function(){
+      overlay.appendTo(document.body);
+      $("body").attr("style", "overflow:hidden;")
+      $(".scroll-menu").fadeIn(600);
+      $(".scroll-menu__list").niceScroll({
+        autohidemode: true,
+        cursorcolor: " transparent ",
+        emulatetouch: true,
+      });
+      $(".scroll-menu__item a").click(function() {
+        overlay.remove();
+        $("body").attr("style", "overflow:auto;")
+        $(".scroll-menu").fadeOut(600);
+      });
+      $(document).mouseup(function (){
+        overlay.remove();
+        $("body").attr("style", "overflow:auto;")
+        $(".scroll-menu").hide();
+      });
+    });
+  }
+});
+</script>
+<script>
+$(function() {
+  $(".card__wrapper").click(function() {
+    var overlay = $('<div class="overlay"> </div>');
+    overlay.appendTo(document.body);
+    $(".main-header").addClass("blur");
+    $(".main-content").addClass("blur");
+    $(".modal").addClass("open");
+    $(function(){
+      $(".modal__top-title").delay(450).fadeTo(600, 1);
+      $(".modal__discription").addClass("slow").find(".modal__table").addClass("slow");
+      $(".add").animate({ marginBottom: 0},600);
+      $(".add__wrapper").animate({ marginBottom: 0},600);
+      $(".add__button-order").addClass("color-btn");
+    });
+    $(".modal__btn-close").click(function (){
+      $(".modal").removeClass("open");
+      $(".main-header").removeClass("blur");
+      $(".main-content").removeClass("blur");
+      $(".modal__top-title").fadeIn("fast");
+      $(".modal__discription").removeClass("slow");
+      $(".modal__table").removeClass("slow");
+      $(".add").animate({ marginBottom: "-100px"},600);
+      $(".add__wrapper").animate({ marginBottom: "-100px"},600);
+      $(".add__button-order").removeClass("color-btn");
+      overlay.fadeTo(800, 0.01, function(){ $(this).remove(); })
+    });
+  });
+
+});
+
+</script>
+<script>
+$("#navToggle").click(function() {
+  $(this).toggleClass("active");
+  $(".main-nav").toggleClass("open");
+});
+</script>
+</body>
 </html>
